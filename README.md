@@ -64,5 +64,16 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Zurex Pharma is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Zurex Pharma, Inc. is a privately held specialty pharmaceutical and medical technology company
+founded in 2008 and headquartered in Middleton, Wisconsin. It develops patented antimicrobial
+formulations intended to prevent healthcare-acquired infections — ZuraPrep (a pre-surgical skin
+antiseptic submitted to the FDA as NDA 210872 in June 2018), ZuraGard, ZurAsept and ZuraLac.
+
+**No API surface.** The products are regulated physical goods, not software. As of 2026-09-05 the
+company's own domain `zurexpharma.com` is pointed at Wix with no site connected, so every path —
+the root, `/openapi.json`, `/llms.txt` and every `/.well-known/` path — returns HTTP 404 with a
+"ConnectYourDomain Error | Wix.com" page. See `x-coverage` in `apis.yml` for the probed evidence.
+
+The previous `Website` pointer on this record was `https://www.nasdaqprivatemarket.com/`, a
+secondary-market trading venue rather than the company's own web presence; it has been removed
+(roadmap#56).

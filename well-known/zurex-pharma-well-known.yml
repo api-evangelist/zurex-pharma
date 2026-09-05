@@ -1,0 +1,46 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  Direct HTTPS probes of every host this record knows for Zurex Pharma
+  (the registrable domain zurexpharma.com and its www host). The company
+  publishes no API, so there is no API baseURL host, no OpenAPI servers[]
+  host and no docs/console host to probe.
+note: >-
+  Every probed path returned HTTP 404. Both hosts are pointed at Wix but no
+  site is connected to the domain, so the origin answers a "ConnectYourDomain
+  Error | Wix.com" HTML error page for every path including the site root.
+  Nothing was served, so NO WellKnown or SecurityTxt pointer is wired in
+  apis.yml — this file records a verified absence, not a presence.
+hosts:
+- host: www.zurexpharma.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: zurexpharma.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404

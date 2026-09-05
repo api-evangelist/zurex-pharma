@@ -1,7 +1,15 @@
 aid: zurex-pharma
 name: Zurex Pharma
-description: 'Zurex Pharma is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Zurex Pharma, Inc. is a privately held specialty pharmaceutical and medical
+  technology company founded in 2008 and headquartered in Middleton, Wisconsin, developing
+  a portfolio of patented antimicrobial formulations intended to prevent healthcare-acquired
+  infections. Its products are physical, regulated goods rather than software: ZuraPrep,
+  a single-use pre-surgical skin antiseptic submitted to the FDA as NDA 210872 in June 2018;
+  ZuraGard for peri-operative and catheter exit-site antisepsis; ZurAsept, a catheter lock
+  solution; and ZuraLac, a teat sanitizer for dairy cattle. Backed by Baird Venture Partners,
+  the State of Wisconsin Investment Board, Peak Ridge Capital and Wisconsin Investment Partners.
+  The company publishes no developer program, no API and no machine-readable API artifacts of
+  any kind, and as of this pass its own domain serves no website.'
 url: https://raw.githubusercontent.com/api-evangelist/zurex-pharma/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -10,8 +18,16 @@ x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
+position: Producing
 tags:
 - Company
+- Pharmaceuticals
+- Medical Devices
+- Healthcare
+- Antimicrobials
+- Infection Prevention
+- Life Sciences
+- Wisconsin
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +35,32 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
-- type: Website
-  url: https://www.nasdaqprivatemarket.com/
+- type: DomainSecurity
+  url: security/zurex-pharma-domain-security.yml
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Zurex Pharma sells regulated physical antiseptics (ZuraPrep, ZuraGard, ZurAsept,
+    ZuraLac), not software, and it has no readable web surface either: its own domain
+    zurexpharma.com is pointed at Wix with no site connected, so the origin answers the
+    "ConnectYourDomain Error | Wix.com" HTML page with HTTP 404 for every path including
+    the root, /openapi.json, /llms.txt and every /.well-known/ path, while its LinkedIn
+    company page at /company/zurex-pharma also 404s.
+  evidence:
+  - url: https://www.zurexpharma.com/
+    status: 404
+  - url: https://www.zurexpharma.com/openapi.json
+    status: 404
+  - url: https://www.zurexpharma.com/llms.txt
+    status: 404
+  - url: https://zurexpharma.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.linkedin.com/company/zurex-pharma
+    status: 404
+  checked: '2026-09-05'
